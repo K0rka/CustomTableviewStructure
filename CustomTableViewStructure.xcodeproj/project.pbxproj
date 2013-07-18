@@ -17,7 +17,11 @@
 		A7403B981797D21300200A64 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A7403B971797D21300200A64 /* Default.png */; };
 		A7403B9A1797D21300200A64 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7403B991797D21300200A64 /* Default@2x.png */; };
 		A7403B9C1797D21300200A64 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7403B9B1797D21300200A64 /* Default-568h@2x.png */; };
-		A7403B9F1797D21300200A64 /* CustomTableViewStructure.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7403B9D1797D21300200A64 /* CustomTableViewStructure.xcdatamodeld */; };
+		A7403BAA1797D44A00200A64 /* CustomTableDataStructure.m in Sources */ = {isa = PBXBuildFile; fileRef = A7403BA71797D44A00200A64 /* CustomTableDataStructure.m */; };
+		A7403BAB1797D44A00200A64 /* NSObject+DeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7403BA91797D44A00200A64 /* NSObject+DeepCopy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
+		A7403BAF1797D4C700200A64 /* BaseCustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7403BAE1797D4C700200A64 /* BaseCustomTableViewController.m */; };
+		A7403BB31797D81E00200A64 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7403BB11797D81E00200A64 /* MainViewController.m */; };
+		A7403BB41797D81E00200A64 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7403BB21797D81E00200A64 /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +39,15 @@
 		A7403B971797D21300200A64 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A7403B991797D21300200A64 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A7403B9B1797D21300200A64 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		A7403B9E1797D21300200A64 /* CustomTableViewStructure.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CustomTableViewStructure.xcdatamodel; sourceTree = "<group>"; };
+		A7403BA61797D44A00200A64 /* CustomTableDataStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableDataStructure.h; sourceTree = "<group>"; };
+		A7403BA71797D44A00200A64 /* CustomTableDataStructure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableDataStructure.m; sourceTree = "<group>"; };
+		A7403BA81797D44A00200A64 /* NSObject+DeepCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DeepCopy.h"; sourceTree = "<group>"; };
+		A7403BA91797D44A00200A64 /* NSObject+DeepCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DeepCopy.m"; sourceTree = "<group>"; };
+		A7403BAD1797D4C700200A64 /* BaseCustomTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseCustomTableViewController.h; path = CustomBaseTableViewController/BaseCustomTableViewController.h; sourceTree = "<group>"; };
+		A7403BAE1797D4C700200A64 /* BaseCustomTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseCustomTableViewController.m; path = CustomBaseTableViewController/BaseCustomTableViewController.m; sourceTree = "<group>"; };
+		A7403BB01797D81E00200A64 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A7403BB11797D81E00200A64 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		A7403BB21797D81E00200A64 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +96,13 @@
 		A7403B8B1797D21300200A64 /* CustomTableViewStructure */ = {
 			isa = PBXGroup;
 			children = (
+				A7403BA51797D44A00200A64 /* TableDataStructure */,
 				A7403B941797D21300200A64 /* AppDelegate.h */,
 				A7403B951797D21300200A64 /* AppDelegate.m */,
-				A7403B9D1797D21300200A64 /* CustomTableViewStructure.xcdatamodeld */,
 				A7403B8C1797D21300200A64 /* Supporting Files */,
+				A7403BB01797D81E00200A64 /* MainViewController.h */,
+				A7403BB11797D81E00200A64 /* MainViewController.m */,
+				A7403BB21797D81E00200A64 /* MainViewController.xib */,
 			);
 			path = CustomTableViewStructure;
 			sourceTree = "<group>";
@@ -104,6 +119,27 @@
 				A7403B9B1797D21300200A64 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A7403BA51797D44A00200A64 /* TableDataStructure */ = {
+			isa = PBXGroup;
+			children = (
+				A7403BAC1797D46400200A64 /* CustomTableViewBaseController */,
+				A7403BA61797D44A00200A64 /* CustomTableDataStructure.h */,
+				A7403BA71797D44A00200A64 /* CustomTableDataStructure.m */,
+				A7403BA81797D44A00200A64 /* NSObject+DeepCopy.h */,
+				A7403BA91797D44A00200A64 /* NSObject+DeepCopy.m */,
+			);
+			path = TableDataStructure;
+			sourceTree = "<group>";
+		};
+		A7403BAC1797D46400200A64 /* CustomTableViewBaseController */ = {
+			isa = PBXGroup;
+			children = (
+				A7403BAD1797D4C700200A64 /* BaseCustomTableViewController.h */,
+				A7403BAE1797D4C700200A64 /* BaseCustomTableViewController.m */,
+			);
+			name = CustomTableViewBaseController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +197,7 @@
 				A7403B981797D21300200A64 /* Default.png in Resources */,
 				A7403B9A1797D21300200A64 /* Default@2x.png in Resources */,
 				A7403B9C1797D21300200A64 /* Default-568h@2x.png in Resources */,
+				A7403BB41797D81E00200A64 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,7 +210,10 @@
 			files = (
 				A7403B921797D21300200A64 /* main.m in Sources */,
 				A7403B961797D21300200A64 /* AppDelegate.m in Sources */,
-				A7403B9F1797D21300200A64 /* CustomTableViewStructure.xcdatamodeld in Sources */,
+				A7403BAA1797D44A00200A64 /* CustomTableDataStructure.m in Sources */,
+				A7403BAB1797D44A00200A64 /* NSObject+DeepCopy.m in Sources */,
+				A7403BAF1797D4C700200A64 /* BaseCustomTableViewController.m in Sources */,
+				A7403BB31797D81E00200A64 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,19 +332,6 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A7403B9D1797D21300200A64 /* CustomTableViewStructure.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A7403B9E1797D21300200A64 /* CustomTableViewStructure.xcdatamodel */,
-			);
-			currentVersion = A7403B9E1797D21300200A64 /* CustomTableViewStructure.xcdatamodel */;
-			path = CustomTableViewStructure.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A7403B781797D21300200A64 /* Project object */;
 }
